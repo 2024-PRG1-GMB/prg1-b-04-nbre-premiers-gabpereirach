@@ -30,7 +30,7 @@ int main() {
                 }
             }
             if (comptage == 0) {
-                cout << auMax << " ";
+                cout << '\t' << auMax << " ";
             }
         }
         cout << endl;
