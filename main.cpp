@@ -22,6 +22,7 @@ int main() {
         } while (number_enter < 2 || number_enter > 1000);
 
         cout << "Voici la liste des nombres premiers" << endl;
+        int counter_line = 0;
         for (int number_tested = 2; number_tested <= number_enter; ++number_tested) {
             int counter = 0;
             for (int divider = 2; divider < number_tested; ++divider) {
@@ -30,6 +31,11 @@ int main() {
                 }
             }
             if (counter == 0) {
+                ++counter_line;
+                if (counter_line > 5) {
+                    counter_line = 1;
+                    cout << endl;
+                }
                 cout << '\t' << number_tested << " ";
             }
         }
